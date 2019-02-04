@@ -1,0 +1,640 @@
+/*-----------------------------------------------------------
+Based on code from the UDemy course : The Setup Course By Ehab Alaa
+-----------------------------------------------------------*/
+
+#preloader {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:99999999999;
+    width:100%;
+    height:100%;
+    overflow:visible;
+    background: #fff url(../images/AjaxLoader.gif) no-repeat center center;
+}
+
+/*-- General Styles --*/
+body{
+	font-family: 'Lato';
+	overflow-x: hidden;
+	color: #25373D;  /* Dark grey */
+	position: relative;
+
+}
+
+/*-- Section Heading --*/
+.section-heading{
+	color: #25373D; /* Dark grey */
+}
+
+.section-heading h3{
+	font-weight: 100;
+	letter-spacing: 3px;
+}
+
+.section-heading hr{
+	margin-top: 30px;
+	margin-bottom: 40px;
+	border-color: #25373D; /* Dark grey */
+}
+
+
+strong{
+	font-weight: 900;
+}
+
+hr {
+	width: 80px;
+}
+
+hr.icon:after {
+    content: "\f123";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .30em;
+    font-family: 'FontAwesome';
+    font-size: 1.5em;
+    color: #25373D; /* Dark grey */
+    background-color: #fff;
+}
+
+
+p{
+	line-height: 24px;
+	font-weight: 300;
+}
+
+blockquote{
+	margin: 0;
+	padding: 0;
+	border-left: none;
+}
+
+.vertical-align{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+::selection {
+	background: #25373D; /* Dark grey */
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #25373D; /* Dark grey */
+	color: #fff;
+}
+
+section{
+	padding: 50px 0;
+}
+
+/* Anchors */
+a,
+a:focus{
+	color: #25373D; /* Dark grey */
+}
+
+a:hover{
+	color: #FDCAC7; /* Light pink */
+	text-decoration: none;
+}
+
+/*-----------------------------------------------------------
+0. Header
+-----------------------------------------------------------*/
+
+/* Side Menu */
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #fff;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav a {
+    display: block;
+    text-decoration: none;
+    font-weight: 300;
+    color: #25373D; /* Dark grey */
+}
+
+.sidebar-nav a:hover {
+    display: block;
+    color: #FDCAC7; /* Light pink */
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 55px;
+}
+
+#menu-toggle {
+    z-index: 1;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background-color: #fff;
+}
+
+#sidebar-wrapper.active {
+    left: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle {
+    margin: 5px 5px 0 0;
+}
+
+/* End Side Menu */
+
+#home{
+	background: url(../images/background.png) fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 700px;
+	color: #25373D; /* Dark grey */
+  margin-top: -120px;
+}
+
+.logo{ /* lines around company name */
+	font-weight: 100;
+	font-size: 72px;
+	border-top: 4px solid #25373D;
+	border-bottom: 4px solid #25373D;
+	display: inline-block;
+	padding: 0 20px 15px 20px;
+}
+
+.logo2{ /* lines around company name in footer*/
+	font-weight: 100;
+	font-size: 45px;
+	border-top: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	display: inline-block;
+	padding: 0 20px 15px 20px;
+}
+
+#home h3{
+	font-weight: 300;
+	margin: 0;
+}
+
+#home .learn-more{
+	color: #25373D; /*Dark grey */
+	position: absolute;
+	font-size: 30px;
+}
+
+.learn-more .fa{
+	position: absolute;
+}
+
+.learn-more .second-arrow{
+	top: 8px;
+}
+
+.learn-more .third-arrow{
+	top: 16px;
+}
+
+/*-----------------------------------------------------------
+1. Objective
+-----------------------------------------------------------*/
+#objective{
+	background-color: #25373D; /* Dark grey */
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+  height: 700px;
+	color: #fff;
+}
+
+#objective h3{
+	font-weight: 300;
+	letter-spacing: 5px;
+	margin-top: 50px; /* trying to change text spilling out */
+}
+
+#objective h4{
+	font-weight: 300;
+  padding: 0 5%;
+	font-size: 14px;
+	margin: 10px 0; /* trying to change text spilling out */
+}
+
+/*-----------------------------------------------------------
+2. ¿Por qué chinas?
+-----------------------------------------------------------*/
+#china{
+  background-color: #FDCAC7; /* Light Pink */
+  background: url(../images/chinabg.png) fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 450px;
+  color: #25373D; /* Dark Grey */
+}
+
+#china h3{
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-top: 50px; /* trying to change text spilling out */
+}
+
+#china h4{
+  font-weight: 300;
+  padding: 10 15%;
+  font-size: 16px;
+  margin: 40px 0; /* trying to change text spilling out */
+}
+
+/*-----------------------------------------------------------
+3. Families
+-----------------------------------------------------------*/
+#familias{
+  background: url(../images/familybg.png) fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #ffffff;
+}
+
+#familias .content h1{
+  font-size: 48px;
+}
+
+#familias .content h3{
+  font-weight: 300;
+  margin-top: 0px;
+}
+
+#familias .content p{
+  margin: 80px 0;
+}
+
+#familias .buttonLight:last-child{
+  margin-right: 20px;
+}
+
+.buttonLight{
+  color: #FDCAC7; /* Light pink */
+  font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #FDCAC7; /* Light pink */
+  border-radius: 2px;
+  padding-bottom: 10px;
+}
+
+.buttonLight:hover{
+  border-color: #D44A59; /* Dark pink */
+  color: #D44A59; /* Dark pink */
+}
+
+/*-----------------------------------------------------------
+4. Aupairs
+-----------------------------------------------------------*/
+#aupairs{
+	background: url(../images/aupairsbg.png) fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #25373D;
+}
+
+#aupairs .content h1{
+	font-size: 48px;
+}
+
+#aupairs .content h3{
+	font-weight: 300;
+	margin-top: 0px;
+}
+
+#aupairs .content p{
+	margin: 40px 0;
+}
+
+#aupairs .buttonDark:last-child{
+}
+
+.buttonDark{
+	color: #D44A59; /* Dark pink */
+	font-size: 16px;
+	text-transform: uppercase;
+	border-bottom: 3px solid #D44A59; /* Dark pink */
+	border-radius: 2px;
+	padding-bottom: 10px;
+}
+
+.buttonDark:hover{
+	border-color: #FDCAC7; /* Light pink */
+}
+
+
+/*-----------------------------------------------------------
+. Quotes
+-----------------------------------------------------------*/
+/*
+#quotes{
+	background: url(../images/quotesbg.png) fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 440px;
+	color: #fff;
+	position: relative;
+}
+
+.owl-carousel h4{
+	font-weight: 300;
+}
+
+.owl-carousel cite{
+	font-style: normal;
+	font-size: 24px;
+	font-weight: 900;
+}
+
+.owl-carousel img{
+	width: 80px;
+	height: 80px;
+	border-radius: 5px;
+	margin: 20px 0;
+}
+
+.owl-carousel p{
+	font-weight: 300;
+}
+*/
+
+/*-----------------------------------------------------------
+5. About
+-----------------------------------------------------------*/
+#about{
+  background-color: #25373D; /* Dark grey */
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 500px;
+  color: #fff;
+}
+
+
+#about h3{
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-top: 30px; /* trying to change text spilling out */
+
+}
+
+#about h4{
+  font-weight: 300;
+  padding: 10 15%;
+  font-size: 16px;
+  margin: 40px 0; /* trying to change text spilling out */
+}
+
+
+/*-----------------------------------------------------------
+6. Contact Form
+-----------------------------------------------------------*/
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #D44A59; /* Dark Pink */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: #25373D; /* Dark Grey */
+}
+
+.form-control {
+	height: 45px;
+	padding: 15px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #25373D;
+	border: 1px solid #ffffff;
+	box-shadow: none;
+	font-weight: 300;
+}
+
+.form-control:focus {
+	box-shadow: none;
+	color: #ffffff;
+	border-color: #25373D;
+
+}
+
+.form-control::-moz-placeholder {
+	color: #fff;
+	opacity: 0.8;
+}
+.form-control:-ms-input-placeholder {
+	color: #fff;
+}
+.form-control::-webkit-input-placeholder {
+	color: #fff;
+}
+
+.form-control:focus::-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+.form-control:focus:-ms-input-placeholder {
+	color: #fff;
+}
+.form-control:focus::-webkit-input-placeholder {
+	color: #fff;
+}
+
+
+#contact .buttonSend:last-child{
+}
+
+.buttonSend{
+	color: #D44A59; /* Dark pink */
+	font-size: 16px;
+	text-transform: uppercase;
+	border-bottom: 3px solid #D44A59; /* Dark pink */
+	border-radius: 2px;
+	padding-bottom: 10px;
+	background-color: #fff;
+}
+
+.buttonSend:hover{
+	border-bottom: 3px solid #FDCAC7; /* Light pink */
+	color: #FDCAC7; /* Light pink */
+
+}
+
+/*-----------------------------------------------------------
+7. FAQ
+-----------------------------------------------------------*/
+#faq{
+  background-color: #ECF0F1; /* Light Grey */
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 550px;
+  color: #25373D; /* Dark Grey */
+}
+
+#faq h3{
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-top: 50px; /* trying to change text spilling out */
+}
+
+#faq h4{
+  font-weight: 300;
+  padding: 10 15%;
+  font-size: 16px;
+  margin: 40px 0; /* trying to change text spilling out */
+}
+
+
+
+/*-----------------------------------------------------------
+8. Footer
+-----------------------------------------------------------*/
+#footer{
+	  background: url(../images/footerbg.png) fixed;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	-webkit-background-size: full-width;
+	background-size: full-width;
+	color: #fff;
+	padding: 50px 0;
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+
+
+#footer .logo{
+	font-size: 47px;
+	padding: 0 20px 10px 20px;
+}
+
+#footer ul{
+	padding-left: 0;
+	display: block;
+	margin-top: 10px;
+}
+
+#footer ul li{
+	display: inline-block;
+}
+
+#footer ul a{
+	font-size: 30px;
+	color: #fff;
+	padding: 10 10px;
+}
+
+.copyrights{
+	background-color: rgba(0,0,0,.5);
+	text-align: center;
+	font-size: 12px;
+	padding: 5px 0;
+	width: 100%;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+
+/*-----------------------------------------------------------
+9. Bootstrap Media Queries
+-----------------------------------------------------------*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 970px) and (max-width: 1170px) {
+
+	.service-item i {
+		float: none;
+		border: none;
+		display: block;
+	}
+
+	.service-item{
+		text-align: center;
+	}
+
+	.service-title{
+		margin-top: 0;
+		margin-left: 0;
+	}
+
+}
+
+@media (max-width: 750px) {
+
+	.progress-bars{
+		margin-top: 30px;
+	}
+
+	.google-map{
+		margin-top: 20px;
+	}
+
+}
